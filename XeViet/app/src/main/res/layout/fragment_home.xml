@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDDDD"
+    tools:context=".ui.home.HomeFragment">
+
+    <!--    header-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#9900CC"
+        android:paddingBottom="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="168dp"
+            android:layout_marginLeft="168dp"
+            android:paddingVertical="10dp"
+            android:text="XE VIỆT"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edt_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="50dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:hint="Nhập từ khóa tìm kiếm"
+            android:paddingVertical="10dp"
+            android:textColorHint="#9900FF"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <ImageButton
+            android:id="@+id/btn_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#9900CC"
+            android:src="@drawable/icon_filter"
+            app:layout_constraintLeft_toRightOf="@id/edt_search"
+            app:layout_constraintTop_toTopOf="@id/edt_search" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    loại xe-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/header">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_view_loaixe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/header"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="#FFFFFF"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="20dp"/>
+
+
+            <TextView
+                android:id="@+id/thuonghieu_phobien"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thương hiệu phổ biến"
+                android:background="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/recycle_view_thuong_hieu"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_view_thuong_hieu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/thuonghieu_phobien"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="#FFFFFF"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thương hiệu đang lựa chọn: "
+                android:background="#FFFFFF"
+                app:layout_constraintTop_toBottomOf="@id/recycle_view_thuong_hieu"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_tatCaSanPham"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tất cả sản phẩm"
+                android:textStyle="bold"
+                android:background="#FFFFFF"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+            <!--                <TextView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Sắp xếp"/>-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleview_tatCaSanPham"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                app:layout_constraintTop_toTopOf="@id/tv_tatCaSanPham" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

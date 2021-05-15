@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="20dp"
+    android:paddingLeft="20dp">
+    <ImageView
+        android:id="@+id/img_icon_person"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+    <TextView
+        android:id="@+id/tv_ten_person_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên mục"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"/>
+</LinearLayout>
