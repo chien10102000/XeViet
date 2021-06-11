@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="30dp"
+    android:layout_marginLeft="20dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_sanpham"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <TextView
+            android:id="@+id/tv_tensp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên xe"
+            android:textSize="18sp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintTop_toBottomOf="@id/img_sanpham"
+            app:layout_constraintLeft_toLeftOf="@id/img_sanpham"/>
+        <TextView
+            android:id="@+id/tv_giasp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="giá"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tv_tensp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_tensp"/>
+        <TextView
+            android:id="@+id/tv_thoigian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thời gian"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_giasp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_tensp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_favorite_black"
+        android:layout_gravity="right"/>
+</FrameLayout>

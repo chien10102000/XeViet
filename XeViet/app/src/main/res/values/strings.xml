@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">XeViet</string>
+    <string name="title_home">Home</string>
+    <string name="title_shopping">shopping</string>
+    <string name="title_add">Đăng tin</string>
+    <string name="title_message">Tin nhắn</string>
+    <string name="title_person">Tài khoản</string>
+    <string name="name_person">ĐĂNG NHẬP</string>
+</resources>
